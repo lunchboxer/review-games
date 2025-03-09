@@ -5,5 +5,6 @@
   <ul>
     <li><a href="/reveal">Picture Reveal</a></li>
     <li><a href="/series">Picture Series</a></li>
+    <li><a href="/color-word">Color Words</a></li>
   </ul>
 </main>
