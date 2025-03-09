@@ -61,17 +61,10 @@
   </div>
   <div class="absolute top-4 left-4 z-10">
     <a href="/">
-      <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Home
-      </button>
+      <button class="btn"> Home </button>
     </a>
     {#if !allTilesInvisible}
-      <button
-        on:click={revealAll}
-        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded ml-2"
-      >
+      <button on:click={revealAll} class="btn btn-primary ml-2">
         Reveal
       </button>
     {/if}
