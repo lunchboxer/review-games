@@ -49,6 +49,9 @@
     gameRevealed = false;
   }
 
+  /**
+   * @param {number} index
+   */
   function revealLastCard(index) {
     if (index === cards.length - 1 && !cards[index].revealed) {
       cards[index].revealed = true;
@@ -68,7 +71,7 @@
     }
   }
 
-  const onkeydown = (event) => {
+  const onkeydown = (/** @type {{ code: string; }} */ event) => {
     if (event.code === "Enter") {
       generateGame();
     }
@@ -91,7 +94,11 @@
         class="card w-[120px] h-[150px] relative rounded-lg overflow-hidden"
         class:highlighted={index === highlightIndex}
       >
-        <img src={card.url} alt={card.alt} class="w-full h-full object-cover" />
+        <img
+          src={card.url}
+          alt={card.alt}
+          class="w-full h-full object-contain"
+        />
         {#if !card.revealed}
           <div
             role="button"

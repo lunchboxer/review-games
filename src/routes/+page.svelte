@@ -4,5 +4,6 @@
 
   <ul>
     <li><a href="/reveal">Picture Reveal</a></li>
+    <li><a href="/series">Picture Series</a></li>
   </ul>
 </main>

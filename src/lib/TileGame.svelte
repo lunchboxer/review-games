@@ -3,6 +3,8 @@
   const GRID_ROWS = 4;
   const TOTAL_TILES = GRID_COLS * GRID_ROWS;
 
+  $: allTilesInvisible = opacities.every((opacity) => opacity === 0);
+
   const alphabet = Array.from({ length: TOTAL_TILES }, (_, i) =>
     String.fromCharCode(65 + i),
   );
@@ -18,7 +20,29 @@
     opacities[index] = 0;
     opacities = [...opacities]; // Trigger reactivity
   }
+
+  function revealAll() {
+    opacities = opacities.map(() => 0);
+  }
 </script>
+
+<svelte:window
+  on:keydown={(e) => {
+    if (e.key === "Escape") {
+      revealAll();
+    } else if (e.key === " ") {
+      if (allTilesInvisible) {
+        return;
+      }
+      const visibleIndices = opacities
+        .map((opacity, index) => (opacity === 1 ? index : null))
+        .filter((index) => index !== null);
+      const randomIndex = Math.floor(Math.random() * visibleIndices.length);
+      const index = visibleIndices[randomIndex];
+      fadeTile(index);
+    }
+  }}
+/>
 
 <div
   class="relative w-full h-screen overflow-hidden"
@@ -40,9 +64,17 @@
       <button
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
-        Back to Home
+        Home
       </button>
     </a>
+    {#if !allTilesInvisible}
+      <button
+        on:click={revealAll}
+        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded ml-2"
+      >
+        Reveal
+      </button>
+    {/if}
   </div>
 </div>
 
