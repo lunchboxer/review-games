@@ -1,7 +1,14 @@
 <script>
-  import TileGame from "$lib/TileGame.svelte";
+    import TileGameContainer from "$lib/TileGameContainer.svelte";
+
+    const imageSet = [
+        {
+            imageUrl: "/images/test-bg.avif",
+            answer: "bus",
+        },
+    ];
 </script>
 
 <main class="min-h-screen w-full">
-  <TileGame />
+    <TileGameContainer {imageSet} />
 </main>

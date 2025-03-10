@@ -1,4 +1,19 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('/fonts/Lexend-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+}
 

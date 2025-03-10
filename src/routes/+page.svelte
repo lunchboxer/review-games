@@ -1,10 +1,26 @@
 <main class="container prose w-full max-w-screen-md mx-auto p-4">
-  <h1>Simple Review Games</h1>
-  <p>Pick a game from the list below</p>
+    <h1>Simple Review Games</h1>
+    <p>Pick a game from the list below</p>
 
-  <ul>
-    <li><a href="/reveal">Picture Reveal</a></li>
-    <li><a href="/series">Picture Series</a></li>
-    <li><a href="/color-word">Color Words</a></li>
-  </ul>
+    <ul>
+        <li>
+            Picture Reveal
+            <ul>
+                <li><a href="/reveal/activities">Activities</a></li>
+            </ul>
+        </li>
+        <li>
+            Picture Series
+            <ul>
+                <li><a href="/series">Birds</a></li>
+            </ul>
+        </li>
+        <li>
+            Color Words
+            <ul>
+                <li><a href="/color-word/lunch">Lunch Time</a></li>
+                <li><a href="/color-word/days">Days of the week</a></li>
+            </ul>
+        </li>
+    </ul>
 </main>
