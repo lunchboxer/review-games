@@ -1,5 +1,4 @@
 <script>
-    // Props
     export let letter;
     export let opacity = 1;
 </script>

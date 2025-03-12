@@ -14,6 +14,10 @@
             imageUrl: "/images/girlonpony.webp",
             answer: "ride a pony",
         },
+        {
+            imageUrl: "/images/playfootball.webp",
+            answer: "play football",
+        },
     ];
 </script>
 
