@@ -1,4 +1,5 @@
 import { writable, derived } from 'svelte/store';
+import { shuffle } from '$lib/utils';
 
 export function createGameStore(imageSet) {
     const images = writable(imageSet);
@@ -32,6 +33,7 @@ export function createGameStore(imageSet) {
     }
 
     function restart() {
+        images.set(shuffle(imageSet));
         currentIndex.set(0);
         revealAll.set(false);
         resetTrigger.set(true);
