@@ -28,7 +28,8 @@
     }
 
     function handleKeydown(e) {
-        if (e.key !== " " || allTilesInvisible) return;
+        console.log(e.key);
+        if (e.key !== "PageDown" || allTilesInvisible) return;
         const visibleIndices = opacities
             .map((o, i) => (o === 1 ? i : null))
             .filter((i) => i !== null);
