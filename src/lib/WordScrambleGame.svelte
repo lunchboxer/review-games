@@ -8,6 +8,7 @@
     let scrambledWord = "";
     let userGuess = "";
     let gameCompleted = false;
+    let showSuccess = false; // For success feedback
 
     // Shuffle the words array
     function shuffleArray(array) {
@@ -41,6 +42,10 @@
         if (userGuess === shuffledWords[currentWordIndex]) {
             score += 10;
 
+            // Show success feedback
+            showSuccess = true;
+            setTimeout(() => (showSuccess = false), 1000); // Hide after 1 second
+
             // Check if the game is completed before incrementing the index
             if (currentWordIndex + 1 >= shuffledWords.length) {
                 gameCompleted = true;
@@ -56,6 +61,7 @@
         userGuess = "";
     }
 
+    // Reset the entire game
     function resetGame() {
         shuffledWords = shuffleArray([...words]);
         currentWordIndex = 0;
@@ -73,12 +79,23 @@
 
     <!-- Core Game Area -->
     <div class="flex-grow flex flex-col items-center justify-center">
+        <!-- Success Feedback -->
+        {#if showSuccess}
+            <div
+                class="absolute inset-0 flex items-center justify-center bg-green-500 bg-opacity-75 transition-opacity duration-500"
+            >
+                <p class="text-6xl font-bold text-white animate-bounce">
+                    Correct!
+                </p>
+            </div>
+        {/if}
+
         <!-- Scrambled Tiles -->
         {#if !gameCompleted}
             <div class="grid grid-cols-5 gap-4 mb-8">
                 {#each scrambledWord.split("") as letter}
                     <button
-                        class="bg-blue-500 text-white text-6xl font-bold p-4 rounded-lg shadow-md hover:bg-blue-600"
+                        class="bg-blue-500 text-white text-6xl font-bold p-4 rounded-lg shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105"
                         on:click={() => handleTileClick(letter)}
                     >
                         {letter}
@@ -136,5 +153,20 @@
     .container {
         max-width: 800px;
         margin: 0 auto;
+    }
+
+    /* Animation for success feedback */
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .animate-bounce {
+        animation: bounce 0.5s infinite;
     }
 </style>
