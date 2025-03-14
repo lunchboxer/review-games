@@ -22,5 +22,12 @@
                 <li><a href="/color-word/days">Days of the week</a></li>
             </ul>
         </li>
+        <li>
+            Word Scramble
+            <ul>
+                <li><a href="/scramble/days">Days of the week</a></li>
+                <li><a href="/scramble/lunch">Lunch Time</a></li>
+            </ul>
+        </li>
     </ul>
 </main>
