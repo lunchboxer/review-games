@@ -73,7 +73,7 @@
     startGame();
 </script>
 
-<div class="container mx-auto p-4 text-center flex flex-col min-h-screen">
+<div class="mx-auto p-4 text-center flex flex-col min-h-screen">
     <!-- Game Title -->
     <h1 class="text-4xl font-bold mb-8">Word Scramble Game</h1>
 
@@ -90,24 +90,21 @@
             </div>
         {/if}
 
-        <!-- Scrambled Tiles -->
         {#if !gameCompleted}
-            <div class="grid grid-cols-5 gap-4 mb-8">
+            <div class="my-4 min-h-48">
+                <p class="text-6xl font-semibold">
+                    {userGuess}
+                </p>
+            </div>
+            <div class="grid grid-cols-5 gap-4 mb-4">
                 {#each scrambledWord.split("") as letter}
                     <button
-                        class="bg-blue-500 text-white text-6xl font-bold p-4 rounded-lg shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105"
+                        class="bg-blue-500 text-white text-6xl font-bold p-4 rounded-lg shadow-md hover:bg-blue-600 transition-transform transform active:scale-95 active:bg-blue-400"
                         on:click={() => handleTileClick(letter)}
                     >
                         {letter}
                     </button>
                 {/each}
-            </div>
-
-            <!-- User Input -->
-            <div class="my-8 min-h-64">
-                <p class="text-6xl font-semibold">
-                    {userGuess}
-                </p>
             </div>
         {:else}
             <!-- Game Completion Screen -->
@@ -150,11 +147,6 @@
 </div>
 
 <style>
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
     /* Animation for success feedback */
     @keyframes bounce {
         0%,
@@ -168,5 +160,9 @@
 
     .animate-bounce {
         animation: bounce 0.5s infinite;
+    }
+    /* Button press feedback */
+    .active\:scale-95:active {
+        transform: scale(0.95);
     }
 </style>
