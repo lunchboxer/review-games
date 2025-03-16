@@ -120,7 +120,7 @@
                 {#each selectedWords as { word, color }}
                     <button
                         on:click={() => checkWord(color)}
-                        class="btn p-4 text-6xl m-4 text-black {color} w-80 h-24 text-6xl"
+                        class="btn p-4 m-2 text-black {color} w-96 h-24 text-4xl"
                         disabled={gameOver}
                     >
                         {word}
@@ -197,6 +197,6 @@
         background-color: oklch(0.637 0.237 25.331);
     }
     .message-overlay {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.25);
     }
 </style>
