@@ -61,18 +61,23 @@
         audio.play();
     }
 
+    function playSoundEffect(sound) {
+        const soundEffect = new Audio(`/audio/${sound}.mp3`);
+        soundEffect.play();
+    }
+
     function checkWord(selectedColor) {
         if (selectedColor === currentColor) {
             message = "👍 Correct!";
             showMessage = true;
             score++;
-            // Select a new random color and play its audio
-            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            playSoundEffect("coin-quiet"); // Play correct sound effect
 
-            if (currentColorIndex === 0) {
+            if (currentColorIndex === colors.length - 1) {
                 gameOver = true;
                 message = `Game Over! Your score: ${score}`;
             } else {
+                currentColorIndex++;
                 currentColor = colors[currentColorIndex];
                 setTimeout(() => {
                     showMessage = false;
@@ -82,6 +87,7 @@
         } else {
             message = "😔 Try again!";
             showMessage = true;
+            playSoundEffect("blip"); // Play incorrect sound effect
             setTimeout(() => {
                 showMessage = false;
             }, 1000); // Show message for 1 second
