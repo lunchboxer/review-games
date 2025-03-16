@@ -29,5 +29,11 @@
                 <li><a href="/scramble/lunch">Lunch Time</a></li>
             </ul>
         </li>
+        <li>
+            Missing Letters
+            <ul>
+                <li><a href="/missing/days">Days of the week</a></li>
+            </ul>
+        </li>
     </ul>
 </main>
