@@ -8,6 +8,9 @@
             <ul>
                 <li><a href="/reveal/activities">Activities</a></li>
             </ul>
+            <ul>
+                <li><a href="/reveal/shapes">Shapes in the world</a></li>
+            </ul>
         </li>
         <li>
             Picture Series

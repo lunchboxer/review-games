@@ -1,4 +1,42 @@
 export const imageSets = {
+    "shapes": [
+        {
+            imageUrl: "/images/circle-bridge.webp",
+            answer: "It's a circle",
+        },
+        {
+            imageUrl: "/images/hexagon-city.webp",
+            answer: "It's a hexagon",
+        },
+        {
+            imageUrl: "/images/octagon-stop-sign.webp",
+            answer: "It's an octagon",
+        },
+        {
+            imageUrl: "/images/oval-tree.sm.webp",
+            answer: "It's an oval",
+        },
+        {
+            imageUrl: "/images/pentagon-flower.webp",
+            answer: "It's a pentagon",
+        },
+        {
+            imageUrl: "/images/Pentagon.jpg",
+            answer: "It's a pentagon",
+        },
+        {
+            imageUrl: "/images/rectangle-sign.jpg",
+            answer: "It's a rectangle",
+        },
+        {
+            imageUrl: "/images/square-city.jpg",
+            answer: "It's a square",
+        },
+        {
+            imageUrl: "/images/triangle-rock.webp",
+            answer: "It's a triangle",
+        },
+    ],
     "activities": [
         {
             imageUrl: "/images/pianogirl.webp",
