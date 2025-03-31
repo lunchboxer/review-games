@@ -2,7 +2,6 @@
     import { shuffle } from "$lib/utils.js";
 
     export let words;
-    console.log(words);
 
     let shuffledWords = shuffle([...words]);
     let currentWordIndex = 0;

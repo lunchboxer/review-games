@@ -100,5 +100,30 @@ export const wordLists = {
     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     lunch: ["carrots", "banana", "apple", "steak", "chicken", "peas", "cake", "pizza", "sandwich", "sausage"],
     house: ["kitchen", "bathroom", "living room", "bedroom", "dining room", "kitchen", "garage", "basement", "hall", "stairs"],
+    animals: ["cat", "dog", "frog", "snake", "elephant", "spider", "crocodile", "tiger", "lizard", "duck", "rat"]
 
+}
+
+export const series = {
+    birds: [
+        "/images/duck.png",
+        "/images/bird_blue.png",
+        "/images/egret.png",
+        "/images/rooster.png",
+        "/images/penguin.png",
+        "/images/swan.png",
+    ],
+    animals: [
+        "/images/cat.png",
+        "/images/dog.png",
+        "/images/frog.png",
+        "/images/snake.webp",
+        "/images/elephant.png",
+        "/images/spider.webp",
+        "/images/crocodile.png",
+        "/images/tiger.png",
+        "/images/lizard.png",
+        "/images/duck.png",
+        "/images/rat.png",
+    ],
 }

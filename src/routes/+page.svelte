@@ -7,18 +7,15 @@
             Picture Reveal
             <ul>
                 <li><a href="/reveal/activities">Activities</a></li>
-            </ul>
-            <ul>
                 <li><a href="/reveal/shapes">Shapes in the world</a></li>
-            </ul>
-            <ul>
                 <li><a href="/reveal/house">Rooms in a house</a></li>
             </ul>
         </li>
         <li>
             Picture Series
             <ul>
-                <li><a href="/series">Birds</a></li>
+                <li><a href="/series/birds">Birds</a></li>
+                <li><a href="/series/animals">Animals</a></li>
             </ul>
         </li>
         <li>
