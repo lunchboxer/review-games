@@ -11,6 +11,9 @@
             <ul>
                 <li><a href="/reveal/shapes">Shapes in the world</a></li>
             </ul>
+            <ul>
+                <li><a href="/reveal/house">Rooms in a house</a></li>
+            </ul>
         </li>
         <li>
             Picture Series
@@ -23,6 +26,7 @@
             <ul>
                 <li><a href="/color-word/lunch">Lunch Time</a></li>
                 <li><a href="/color-word/days">Days of the week</a></li>
+                <li><a href="/color-word/house">House</a></li>
             </ul>
         </li>
         <li>

@@ -11,7 +11,16 @@
         "peas",
         "cake",
     ];
-    let colors = ["red", "green", "blue", "yellow", "orange", "purple", "pink"];
+    let colors = [
+        "red",
+        "green",
+        "blue",
+        "yellow",
+        "orange",
+        "purple",
+        "pink",
+        "white",
+    ];
 
     let selectedWords = [];
     let audio;
@@ -22,34 +31,49 @@
     let currentColorIndex = 0;
     let score = 0;
     let gameOver = false;
-
-    // Shuffle colors and words on initialization
-    colors = shuffle(colors);
-    words = shuffle(words);
+    let numItems = 0; // Number of words/colors actually used in the game
+    let activeColors = []; // The colors actually used in the current game
 
     function playAgain() {
+        // Reset basic state
         gameStarted = true;
         gameOver = false;
         score = 0;
+        gameOver = false;
         currentColorIndex = 0;
-        colors = shuffle(colors);
-        words = shuffle(words);
+        showMessage = false;
+        // startGame will handle shuffling, slicing, and setting the first color
         startGame();
         playAudio(currentColor);
-        showMessage = false;
     }
 
     function startGame() {
-        // Select the first 7 words
-        selectedWords = words.slice(0, 7).map((word, index) => ({
+        // Determine the number of items based on input words, max 8
+        numItems = Math.min(words.length, 8);
+
+        // Shuffle the full lists first
+        let shuffledColors = shuffle([...colors]); // Use spread to avoid modifying original prop if needed later
+        let shuffledWords = shuffle([...words]);
+
+        // Slice to the actual number of items for this game
+        activeColors = shuffledColors.slice(0, numItems);
+        let currentWords = shuffledWords.slice(0, numItems);
+
+        // Create the word objects for the buttons
+        selectedWords = currentWords.map((word, index) => ({
             word,
-            color: colors[index],
-            spaces: Math.floor(Math.random() * 8) + 1, // Random spaces between 1 and 8
+            color: activeColors[index], // Assign color from the sliced list
+            spaces: Math.floor(Math.random() * 8) + 1, // Random spaces (optional feature)
         }));
+
+        // Shuffle the final selection for display order
         selectedWords = shuffle(selectedWords);
+
+        // Reset game state
         score = 0;
         gameOver = false;
-        currentColor = colors[currentColorIndex];
+        currentColorIndex = 0; // Start from the first color
+        currentColor = activeColors[currentColorIndex]; // Set the first color
     }
 
     function playAudio(color) {
@@ -73,12 +97,14 @@
             score++;
             playSoundEffect("coin-quiet"); // Play correct sound effect
 
-            if (currentColorIndex === colors.length - 1) {
+            // Check against the actual number of items used in this game
+            if (currentColorIndex === numItems - 1) {
                 gameOver = true;
                 message = `Game Over! Your score: ${score}`;
             } else {
                 currentColorIndex++;
-                currentColor = colors[currentColorIndex];
+                // Get the next color from the active list
+                currentColor = activeColors[currentColorIndex];
                 setTimeout(() => {
                     showMessage = false;
                     playAudio(currentColor);
@@ -96,8 +122,7 @@
 
     function handleStart() {
         gameStarted = true;
-        colors = shuffle(colors);
-        currentColorIndex = 0;
+        // startGame now handles shuffling, slicing, and setting the first color
         startGame();
         playAudio(currentColor);
     }
@@ -150,9 +175,11 @@
     >
         <!-- Progress Indicators -->
         <div class="text-left">
-            <p class="text-xl font-semibold">
-                Color {currentColorIndex + 1} of {colors.length}
-            </p>
+            {#if numItems > 1}
+                <p class="text-xl font-semibold">
+                    Color {currentColorIndex + 1} of {numItems}
+                </p>
+            {/if}
         </div>
 
         <!-- Buttons -->
@@ -195,6 +222,9 @@
     }
     button.red {
         background-color: oklch(0.637 0.237 25.331);
+    }
+    button.white {
+        background-color: var(--color-white);
     }
     .message-overlay {
         background: rgba(0, 0, 0, 0.25);

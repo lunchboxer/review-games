@@ -1,4 +1,38 @@
 export const imageSets = {
+    "house": [
+        {
+            imageUrl: "/images/stairs.webp",
+            answer: "It's the stairs",
+        },
+        {
+            imageUrl: "/images/bathroom.webp",
+            answer: "It's a bathroom",
+        },
+        {
+            imageUrl: "/images/living-room.webp",
+            answer: "It's a living room",
+        },
+        {
+            imageUrl: "/images/bedroom.webp",
+            answer: "It's a bedroom",
+        },
+        {
+            imageUrl: "/images/dining-room.webp",
+            answer: "It's a dining room",
+        },
+        {
+            imageUrl: "/images/hall.webp",
+            answer: "It's a hall",
+        },
+        {
+            imageUrl: "/images/kitchen.webp",
+            answer: "It's a kitchen",
+        },
+        {
+            imageUrl: "/images/basement.webp",
+            answer: "It's a basement",
+        },
+    ],
     "shapes": [
         {
             imageUrl: "/images/circle-bridge.webp",
@@ -65,5 +99,6 @@ export const wordLists = {
     days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     lunch: ["carrots", "banana", "apple", "steak", "chicken", "peas", "cake", "pizza", "sandwich", "sausage"],
+    house: ["kitchen", "bathroom", "living room", "bedroom", "dining room", "kitchen", "garage", "basement", "hall", "stairs"],
 
 }
