@@ -69,7 +69,7 @@
         if (event.code === "Enter") {
             generateGame();
         }
-        if (event.code === "Space") {
+        if (event.code === "Space" || event.code === "PageDown") {
             if (gameRevealed) {
                 generateGame();
             } else {
