@@ -3,7 +3,7 @@
     import { fade } from "svelte/transition";
 
     export let data;
-    const imageSet = data.imageSet;
+    const { imageSet } = data;
 
     const patterns = [
         "ABABAB",
@@ -81,38 +81,49 @@
 
 <svelte:window {onkeydown} />
 
-<main class="p-4 min-h-screen">
-    <div class="flex gap-2 justify-center my-5">
-        {#each cards as card, index}
-            <div
-                class="card w-[120px] h-[150px] relative rounded-lg overflow-hidden"
-                class:highlighted={index === highlightIndex}
-            >
-                <img
-                    src={card.url}
-                    alt={card.alt}
-                    class="w-full h-full object-contain"
-                />
-                {#if !card.revealed}
-                    <div
-                        role="button"
-                        tabindex={card.revealed ? -1 : 0}
-                        class="absolute inset-0 bg-gray-500 border-2 border-gray-600 rounded-lg"
-                        on:click={() => revealLastCard(index)}
-                        out:fade
-                        on:keydown={(e) => {
-                            if (e.key === "Enter" || e.key === " ") {
-                                revealLastCard(index);
-                            }
-                        }}
-                    ></div>
-                {/if}
-            </div>
-        {/each}
+<main class="min-h-screen flex flex-col">
+    <div class="flex-grow p-4 text-center">
+        <h1 class="text-4xl font-bold mb-8">Word Series Game</h1>
+        <!-- Added flex-grow wrapper -->
+        <div class="flex gap-2 justify-center items-center my-5">
+            {#each cards as card, index}
+                <div
+                    class="card w-[120px] h-[150px] relative rounded-lg overflow-hidden"
+                    class:highlighted={index === highlightIndex}
+                >
+                    <img
+                        src={card.url}
+                        alt={card.alt}
+                        class="w-full h-full object-contain"
+                    />
+                    {#if !card.revealed}
+                        <div
+                            role="button"
+                            tabindex={card.revealed ? -1 : 0}
+                            class="absolute inset-0 bg-gray-500 border-2 border-gray-600 rounded-lg"
+                            on:click={() => revealLastCard(index)}
+                            out:fade
+                            on:keydown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    revealLastCard(index);
+                                }
+                            }}
+                        ></div>
+                    {/if}
+                </div>
+            {/each}
+        </div>
     </div>
-    <button class="btn btn-primary block mx-auto mt-5" on:click={generateGame}>
-        Next Round
-    </button>
+    <!-- Close flex-grow wrapper -->
+
+    <footer class="p-4 bg-base-300 flex justify-end items-center">
+        <div class="space-x-2">
+            <a class="btn btn-secondary" href="/">Leave Game</a>
+            <button class="btn btn-primary" on:click={generateGame}>
+                Next Round
+            </button>
+        </div>
+    </footer>
 </main>
 
 <style>
