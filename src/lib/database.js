@@ -71,6 +71,32 @@ export const imageSets = {
             answer: "It's a triangle",
         },
     ],
+    "shapes2": [
+        {
+            imageUrl: "/images/circles.jpg",
+            answer: "It's a circle",
+        },
+        {
+            imageUrl: "/images/beehive-hexagon.jpg",
+            answer: "It's a hexagon",
+        },
+        {
+            imageUrl: "/images/brick-rectangles.jpg",
+            answer: "It's an rectangle",
+        },
+        {
+            imageUrl: "/images/kiwi-oval.jpg",
+            answer: "It's an oval",
+        },
+        {
+            imageUrl: "/images/okra-pentagon.jpg",
+            answer: "It's a pentagon",
+        },
+        {
+            imageUrl: "/images/stick-triangles.jpg",
+            answer: "It's a triangle",
+        },
+    ],
     "activities": [
         {
             imageUrl: "/images/pianogirl.webp",
