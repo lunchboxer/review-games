@@ -77,7 +77,7 @@ export const imageSets = {
             answer: "It's a circle",
         },
         {
-            imageUrl: "/images/beehive-hexagon.jpg",
+            imageUrl: "/images/beehive-hexagons.jpg",
             answer: "It's a hexagon",
         },
         {

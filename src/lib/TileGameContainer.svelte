@@ -1,9 +1,10 @@
 <script>
     import { createGameStore } from "$lib/stores/revealGameStore.js";
     import TileGame from "./TileGame.svelte";
+    import { shuffle } from "$lib/utils.js";
 
     export let imageSet;
-    const game = createGameStore(imageSet);
+    const game = createGameStore(shuffle(imageSet));
     const {
         currentImage,
         isGameCompleted,

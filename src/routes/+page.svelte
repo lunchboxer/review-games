@@ -8,6 +8,7 @@
             <ul>
                 <li><a href="/reveal/activities">Activities</a></li>
                 <li><a href="/reveal/shapes">Shapes in the world</a></li>
+                <li><a href="/reveal/shapes2">More shapes in the world</a></li>
                 <li><a href="/reveal/house">Rooms in a house</a></li>
             </ul>
         </li>
