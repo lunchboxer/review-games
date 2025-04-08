@@ -25,6 +25,7 @@
                 <li><a href="/color-word/lunch">Lunch Time</a></li>
                 <li><a href="/color-word/days">Days of the week</a></li>
                 <li><a href="/color-word/house">House</a></li>
+                <li><a href="/color-word/tens">Tens</a></li>
             </ul>
         </li>
         <li>
