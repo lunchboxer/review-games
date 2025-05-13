@@ -128,6 +128,7 @@ export const wordLists = {
     house: ["kitchen", "bathroom", "living room", "bedroom", "dining room", "kitchen", "garage", "basement", "hall", "stairs"],
     animals: ["cat", "dog", "frog", "snake", "elephant", "spider", "crocodile", "tiger", "lizard", "duck", "rat"],
     tens: ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
+    clothes: ["cap", "sweater", "shoes", "T-shirt", "socks", "shorts", "jacket", "trousers", "jeans", "skirt"]
 }
 
 export const series = {
