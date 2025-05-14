@@ -17,6 +17,7 @@
             <ul>
                 <li><a href="/series/birds">Birds</a></li>
                 <li><a href="/series/animals">Animals</a></li>
+                <li><a href="/series/clothes">Clothes</a></li>
             </ul>
         </li>
         <li>
@@ -26,6 +27,7 @@
                 <li><a href="/color-word/days">Days of the week</a></li>
                 <li><a href="/color-word/house">House</a></li>
                 <li><a href="/color-word/tens">Tens</a></li>
+                <li><a href="/color-word/clothes">Clothes</a></li>
             </ul>
         </li>
         <li>

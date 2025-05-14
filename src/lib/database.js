@@ -140,6 +140,18 @@ export const series = {
         "/images/penguin.png",
         "/images/swan.png",
     ],
+    clothes: [
+        "/images/cap.webp",
+        "/images/sweater.webp",
+        "/images/shoes.webp",
+        "/images/t-shirt.webp",
+        "/images/socks.webp",
+        "/images/shorts.webp",
+        "/images/jacket.webp",
+        "/images/trousers.webp",
+        "/images/jeans.webp",
+        "/images/skirt.webp",
+    ],
     animals: [
         "/images/cat.png",
         "/images/dog.png",
