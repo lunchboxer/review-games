@@ -38,9 +38,11 @@
             </ul>
         </li>
         <li>
-            Missing Letters
+            There Was an Old Lady Who Swallowed a Fly
             <ul>
-                <li><a href="/missing/days">Days of the week</a></li>
+                <li><a href="/color-word/oldlady">Color Words</a></li>
+                <li><a href="/series/oldlady">Picture Series</a></li>
+                <li><a href="/reveal/oldlady">Picture Reveal</a></li>
             </ul>
         </li>
     </ul>

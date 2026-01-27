@@ -77,7 +77,7 @@ export const imageSets = {
             answer: "It's a circle",
         },
         {
-            imageUrl: "/images/beehive-hexagons.jpg",
+            imageUrl: "/images/beehive-hexagons.webp",
             answer: "It's a hexagon",
         },
         {
@@ -118,6 +118,32 @@ export const imageSets = {
             imageUrl: "/images/ridebike.webp",
             answer: "ride my bike",
         },
+    ],
+    "oldlady": [
+        {
+            imageUrl: "/images/old-lady-on-bench.webp",
+            answer: "old lady",
+        },
+        {
+            imageUrl: "/images/spider-on-web.webp",
+            answer: "spider",
+        },
+        {
+            imageUrl: "/images/dog-on-pink.webp",
+            answer: "dog",
+        },
+        {
+            imageUrl: "/images/cat-on-green.webp",
+            answer: "cat",
+        },
+        {
+            imageUrl: "/images/fly-on-wood.webp",
+            answer: "fly",
+        },
+        {
+            imageUrl: "/images/cardinal-on-branch.webp",
+            answer: "bird",
+        },
     ]
 }
 
@@ -128,7 +154,8 @@ export const wordLists = {
     house: ["kitchen", "bathroom", "living room", "bedroom", "dining room", "kitchen", "garage", "basement", "hall", "stairs"],
     animals: ["cat", "dog", "frog", "snake", "elephant", "spider", "crocodile", "tiger", "lizard", "duck", "rat"],
     tens: ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
-    clothes: ["cap", "sweater", "shoes", "T-shirt", "socks", "shorts", "jacket", "trousers", "jeans", "skirt"]
+    clothes: ["cap", "sweater", "shoes", "T-shirt", "socks", "shorts", "jacket", "trousers", "jeans", "skirt"],
+    oldlady: ["old lady", "spider", "fly", "cat", "bird", "dog", "cow", "horse"]
 }
 
 export const series = {
@@ -158,11 +185,21 @@ export const series = {
         "/images/frog.png",
         "/images/snake.webp",
         "/images/elephant.png",
-        "/images/spider.webp",
+        "/images/spider2.webp",
         "/images/crocodile.png",
         "/images/tiger.png",
         "/images/lizard.png",
         "/images/duck.png",
         "/images/rat.png",
+    ],
+    oldlady: [
+        "/images/old-lady.webp",
+        "/images/spider2.webp",
+        "/images/fly.webp",
+        "/images/cat.png",
+        "/images/bird_blue.png",
+        "/images/dog.png",
+        "/images/cow.webp",
+        "/images/horse.webp",
     ],
 }
